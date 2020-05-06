@@ -20,9 +20,7 @@ package com.wso2telco.workflow.api;
 import com.google.gson.Gson;
 import com.wso2telco.dep.operatorservice.service.OparatorService;
 import com.wso2telco.dep.reportingservice.southbound.SbHostObjectUtils;
-import com.wso2telco.workflow.model.APISubscriptionDTO;
-import com.wso2telco.workflow.model.ApprovalDTO;
-import com.wso2telco.workflow.model.ApplicationStatusDTO;
+import com.wso2telco.workflow.model.*;
 import com.wso2telco.workflow.model.ApprovalDTO;
 import com.wso2telco.workflow.service.WorkflowHistoryService;
 import com.wso2telco.workflow.utils.WorkflowServiceException;
@@ -46,6 +44,28 @@ public class WorkflowHistoryAPI {
 
     private static final Log log = LogFactory.getLog(WorkflowHistoryAPI.class);
     private static final String DEPLOYMENT_TYPE_SYSTEM_PARAM = "DEPLOYMENT_TYPE";
+
+    @GET
+    @Path("/application/{applicationId}")
+    @Produces("application/json")
+    public Response getApplicationHistory(@PathParam("applicationId") int applicationId) {
+        return null;
+    }
+
+    @GET
+    @Path("/subscription/{subscriptionId}")
+    @Produces("application/json")
+    public Response getSubscriptionHistory(@PathParam("subscriptionId") int subscriptionId) {
+        return null;
+    }
+
+    @GET
+    @Path("/overall/{applicationId}")
+    @Produces("application/json")
+    public Response getOverallApplicationHistory(@PathParam("applicationId") int applicationId) {
+        return null;
+    }
+
 
     @GET
     @Path("/approval/{app_id}")
